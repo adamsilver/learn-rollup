@@ -1,0 +1,2 @@
+  globalDocument = html = null;
+}(this));
