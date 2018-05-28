@@ -3,12 +3,16 @@ import { isHostMethod } from './modules/isHostMethod';
 import { isHostObjectProperty } from './modules/isHostObjectProperty';
 import { addClass } from './modules/addClass/2';
 import { removeClass } from './modules/removeClass/1';
+import { delegateListener } from './modules/delegateListener';
+import { getEventTarget } from './modules/getEventTarget';
 
 if(html) {
   m.isHostMethod = isHostMethod;
   m.isHostObjectProperty = isHostObjectProperty;
   m.addClass = addClass;
   m.removeClass = removeClass;
+  m.delegateListener = delegateListener;
+  m.getEventTarget = getEventTarget;
 }
 
 // urgh

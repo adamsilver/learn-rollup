@@ -33,6 +33,20 @@
     window.setTimeout(function() {
       m.removeClass(document.body, 'adam');
     }, 2000)
+
+    if(m.delegateListener) {
+      m.delegateListener(document.body, 'click', bodyClick.bind({jen: 1}), function(el, target) {
+        if(target.nodeName.toLowerCase() == "p") {
+          return target;
+        }
+      });
+    }
+
+    function bodyClick(e, currentTarget, el) {
+      console.log(this, e, currentTarget, el);
+    }
+
+
   </script>
 </body>
 </html>
